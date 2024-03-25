@@ -17,7 +17,7 @@ app.use('/static', express.static(__dirname + '../ChatApp/src/backendImages'));
 app.use(express.json())
 app.use(
     cors({
-        origin: frontendURL,
+        origin: [frontendURL],
         methods: ["GET", "POST"],
         credentials: true,
     })
@@ -26,7 +26,7 @@ app.use(
 const server = createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: frontendURL,
+        origin: [frontendURL],
         methods: ["GET", "POST"],
         credentials: true,
     },
