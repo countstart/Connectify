@@ -12,6 +12,8 @@ function Login() {
     const [password,setPassword] = useState("")
     const [loginStatus,setLoginStatus] = useState("")
 
+    const backendURL = "https://connectify-backend-six.vercel.app"
+
     const loginHandler = async (event)=>{
         event.preventDefault()
         setLoading(true)
@@ -23,7 +25,8 @@ function Login() {
                 }
             };
             const response = await axios.post(
-                'http://localhost:8000/user/login',
+                // 'http://localhost:8000/user/login',
+                `${backendURL}/user/login`,
                 {
                     username : username,
                     password : password

@@ -13,6 +13,8 @@ function Login() {
     const [email,setEmail] = useState("")
     const [signUpStatus,setSignUpStatus] = useState("")
 
+    const backendURL = "https://connectify-backend-six.vercel.app"
+
     const SignUpHandler = async (event)=>{
         event.preventDefault()
         setLoading(true)
@@ -23,7 +25,8 @@ function Login() {
                 }
             };
             const response = await axios.post(
-                'http://localhost:8000/user/register',
+                // 'http://localhost:8000/user/register',
+                `${backendURL}/user/register`,
                 {
                     username : username,
                     email : email,

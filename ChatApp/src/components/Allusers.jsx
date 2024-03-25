@@ -7,6 +7,7 @@ function Allusers() {
     const [allUsers,setAllUsers] = useState([])
     const [loading,setLoading] = useState(true);
     const userData = JSON.parse(localStorage.getItem("userData"));
+    const backendURL = "https://connectify-backend-six.vercel.app"
 
     useEffect(()=>{
         if(!userData){
@@ -23,7 +24,8 @@ function Allusers() {
                 };
         
                 const response = await axios.get(
-                    "http://localhost:8000/user/all-users",
+                    // "http://localhost:8000/user/all-users",
+                    `${backendURL}/user/all-users`,
                     config,
                 )
                
@@ -48,7 +50,8 @@ function Allusers() {
         };
         try {
             const response = await axios.post(
-                "http://localhost:8000/user/request-sent",
+                // `http://localhost:8000/user/request-sent`,
+                `${backendURL}/user/request-sent`,
                 {
                     name : friendname
                 },

@@ -10,7 +10,7 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const frontendURL = "http://localhost:5173";
+const frontendURL = "https://connectify-indol.vercel.app";
 // app.use(express.urlencoded({extended:true}))
 app.use('/static', express.static(__dirname + '../ChatApp/src/backendImages'));
 
