@@ -5,7 +5,7 @@ import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import SearchIcon from '@mui/icons-material/Search';
-import SbConversations from './sbConversations';
+import SbConversations from './SbConversations';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
