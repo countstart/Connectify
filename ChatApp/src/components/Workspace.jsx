@@ -10,7 +10,8 @@ import FriendMessage from './FriendMessage'
 // import Writechat from './Writechat'
 function Workspace() {
   const backendURL = "https://connectify-backend-sigma.vercel.app"
-  const socket = useMemo(()=>io(backendURL));
+  // const socket = useMemo(()=>io(backendURL));
+  const socket = io(backendURL);
 
   var myname = "";
   const {othername} = useParams();
@@ -51,7 +52,7 @@ function Workspace() {
       }
     }
     fetchFriendsChatId()
-  },[othername])
+  },[othername,userData,backendURL])
 
   useEffect(()=>{
     const config = {
@@ -79,7 +80,7 @@ function Workspace() {
       }
     }
     if(chatid!=="") fetchAllMessages()
-  },[chatid,refresh])
+  },[chatid,refresh,userData])
 
   
   const handleOnClick = ()=>{
@@ -128,7 +129,7 @@ function Workspace() {
     return ()=>{
       socket.disconnect()
     }
-  },[socket])
+  },[socket,chatid])
 
   return (
     <div className='workspace'>
