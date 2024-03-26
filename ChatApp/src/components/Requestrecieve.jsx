@@ -7,7 +7,7 @@ function Requestrecieve() {
     const [loading,setLoading] = useState(true);
     const userData = JSON.parse(localStorage.getItem("userData"));
     const [refresh,setRefresh] = useState(false)
-    const backendURL = "https://connectify-backend-six.vercel.app"
+    const backendURL = "https://connectify-backend-sigma.vercel.app"
 
     const handleOnClick = async (friendname)=>{
         const config = {

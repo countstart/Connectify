@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 function UploadNew() {
     const userData = JSON.parse(localStorage.getItem("userData"))
     const navigate = useNavigate();
-    const backendURL = "https://connectify-backend-six.vercel.app"
+    const backendURL = "https://connectify-backend-sigma.vercel.app"
 
     const [selectedFile, setSelectedFile] = useState(null);
     const [imageUrl, setImageUrl] = useState(null);

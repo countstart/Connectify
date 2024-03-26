@@ -12,7 +12,7 @@ function Login() {
     const [password,setPassword] = useState("")
     const [loginStatus,setLoginStatus] = useState("")
 
-    const backendURL = "https://connectify-backend-six.vercel.app"
+    const backendURL = "https://connectify-backend-sigma.vercel.app"
 
     const loginHandler = async (event)=>{
         event.preventDefault()

@@ -7,7 +7,7 @@ function Allusers() {
     const [allUsers,setAllUsers] = useState([])
     const [loading,setLoading] = useState(true);
     const userData = JSON.parse(localStorage.getItem("userData"));
-    const backendURL = "https://connectify-backend-six.vercel.app"
+    const backendURL = "https://connectify-backend-sigma.vercel.app"
 
     useEffect(()=>{
         if(!userData){

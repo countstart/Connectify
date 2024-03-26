@@ -9,7 +9,7 @@ import FriendMessage from './FriendMessage'
 // import ChatArea from './ChatArea'
 // import Writechat from './Writechat'
 function Workspace() {
-  const backendURL = "https://connectify-backend-six.vercel.app"
+  const backendURL = "https://connectify-backend-sigma.vercel.app"
   const socket = useMemo(()=>io(backendURL));
 
   var myname = "";
