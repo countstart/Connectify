@@ -33,7 +33,7 @@ function Login() {
                 },
                 config
             )
-            if(response){
+            if(response.status === 200){
                 console.log(response)
                 console.log('entered')
                 setLoginStatus({msg:"Success",key:Math.random()})
@@ -42,7 +42,7 @@ function Login() {
                 navigate('/user/chat/welcome')
             }
             else{
-                throw "some error occurred."
+                throw new Error("Invalid response status");
             }
             
         } catch (error) {
