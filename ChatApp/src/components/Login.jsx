@@ -33,13 +33,18 @@ function Login() {
                 },
                 config
             )
+            if(response){
+                console.log(response)
+                console.log('entered')
+                setLoginStatus({msg:"Success",key:Math.random()})
+                setLoading(false)
+                localStorage.setItem("userData",JSON.stringify(response))
+                navigate('/user/chat/welcome')
+            }
+            else{
+                throw "some error occurred."
+            }
             
-            console.log(response)
-            console.log('entered')
-            setLoginStatus({msg:"Success",key:Math.random()})
-            setLoading(false)
-            localStorage.setItem("userData",JSON.stringify(response))
-            navigate('/user/chat/welcome')
         } catch (error) {
             setLoginStatus({
                 msg: "Invalid User name or Password",
