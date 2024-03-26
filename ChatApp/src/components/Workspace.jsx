@@ -52,7 +52,7 @@ function Workspace() {
       }
     }
     fetchFriendsChatId()
-  },[othername,userData,backendURL])
+  },[othername])
 
   useEffect(()=>{
     const config = {
@@ -80,7 +80,7 @@ function Workspace() {
       }
     }
     if(chatid!=="") fetchAllMessages()
-  },[chatid,refresh,userData])
+  },[chatid,refresh])
 
   
   const handleOnClick = ()=>{
@@ -129,7 +129,7 @@ function Workspace() {
     return ()=>{
       socket.disconnect()
     }
-  },[socket,chatid])
+  },[socket])
 
   return (
     <div className='workspace'>
