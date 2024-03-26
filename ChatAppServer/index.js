@@ -38,7 +38,7 @@ const io = new Server(server, {
 });
 
 app.use(express.urlencoded({extended:true}))
-app.use('/static', express.static(path.join(__dirname, '../ChatApp/src/backendImages')));
+// app.use('/static', express.static(path.join(__dirname, '../ChatApp/src/backendImages')));
 
 app.use(express.json())
 
