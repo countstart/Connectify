@@ -34,7 +34,7 @@ const io = new Server(server, {
 
 const connectDB = async ()=>{
     try{
-        const connect = await mongoose.connect(process.env.MONGO_URL)
+        const connect = await mongoose.connect(`${process.env.MONGO_URL}`)
         if(connect){
             console.log("MongoDB is connected.");
         }
