@@ -5,6 +5,7 @@ function Requestsent() {
     const [sentRequests,setSentRequests] = useState([]);
     const [loading,setLoading] = useState(true);
     const userData = JSON.parse(localStorage.getItem("userData"));
+    const backendURL = "https://connectify-backend-six.vercel.app"
 
     useEffect(()=>{
         if(!userData){
@@ -20,7 +21,7 @@ function Requestsent() {
                     },
                 };
                 const response = await axios.get(
-                    "http://localhost:8000/user/friendrequest",
+                    `${backendURL}/user/friendrequest`,
                     config
                 )
                 console.log(response);

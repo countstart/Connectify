@@ -9,7 +9,7 @@ import FriendMessage from './FriendMessage'
 // import ChatArea from './ChatArea'
 // import Writechat from './Writechat'
 function Workspace() {
-  const backendURL = "http://localhost:8000/";
+  const backendURL = "https://connectify-backend-six.vercel.app"
   const socket = useMemo(()=>io(backendURL));
 
   var myname = "";
@@ -37,7 +37,7 @@ function Workspace() {
     const fetchFriendsChatId = async ()=>{
       try {
         const response = await axios.post(
-          "http://localhost:8000/user/fetchFriendsChatId",
+          `${backendURL}/user/fetchFriendsChatId`,
           {
             name : othername
           },

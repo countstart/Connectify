@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom'
 function MyUploads() {
     const userData = JSON.parse(localStorage.getItem("userData"))
 
+    const backendURL = "https://connectify-backend-six.vercel.app"
+
     const [myuploads,setMyuploads] = useState([])
     const navigate = useNavigate();
     const handleNewUpload = ()=>{
@@ -25,7 +27,8 @@ function MyUploads() {
         const fetchMyUploads = async()=>{
             try {
                 const response = await axios.get(
-                    "http://localhost:8000/user/fetchMyUploads",
+                    // "http://localhost:8000/user/fetchMyUploads",
+                    `${backendURL}/user/fetchMyUploads`,
                     config
                 )
                 if(response){

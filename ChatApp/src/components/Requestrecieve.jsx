@@ -7,6 +7,7 @@ function Requestrecieve() {
     const [loading,setLoading] = useState(true);
     const userData = JSON.parse(localStorage.getItem("userData"));
     const [refresh,setRefresh] = useState(false)
+    const backendURL = "https://connectify-backend-six.vercel.app"
 
     const handleOnClick = async (friendname)=>{
         const config = {
@@ -16,7 +17,7 @@ function Requestrecieve() {
         };
         try {
             const response = await axios.post(
-                "http://localhost:8000/user/request-recieve",
+                `${backendURL}/user/request-recieve`,
                 {
                     name : friendname
                 },
@@ -44,7 +45,7 @@ function Requestrecieve() {
                     },
                 };
                 const response = await axios.get(
-                    "http://localhost:8000/user/friendrequestrecieve",
+                    `${backendURL}/user/friendrequestrecieve`,
                     config
                 )
                 // console.log(response);

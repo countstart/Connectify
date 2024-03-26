@@ -13,6 +13,7 @@ function Sidebar() {
   const [conversations,setConversations] = useState([])
   const navigate = useNavigate();
   const userData = JSON.parse(localStorage.getItem("userData"))
+  const backendURL = "https://connectify-backend-six.vercel.app"
 
   useEffect(()=>{
     if(!userData){
@@ -28,7 +29,7 @@ function Sidebar() {
       };
       try {
         const response = await axios.get(
-          "http://localhost:8000/user/my-friends",
+          `${backendURL}/user/my-friends`,
           config
         )
         const data = await response.data
