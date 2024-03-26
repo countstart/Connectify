@@ -14,20 +14,24 @@ const frontendURL = "https://connectify-indol.vercel.app";
 
 app.use(
     cors({
-        origin: ["*"],
+        origin: [frontendURL],
         methods: ["GET", "POST"],
         credentials: true,
     })
 )
 
 app.options('*', 
-    cors()
+    cors({
+        origin: [frontendURL],
+        methods: ["GET", "POST"],
+        credentials: true,
+    })
 );
 
 const server = createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: ["*"],
+        origin: [frontendURL],
         methods: ["GET", "POST"],
         credentials: true,
     },
