@@ -27,8 +27,7 @@ function MyUploads() {
         const fetchMyUploads = async()=>{
             try {
                 const response = await axios.get(
-                    // "http://localhost:8000/user/fetchMyUploads",
-                    `${backendURL}/user/fetchMyUploads`,
+                    backendURL + "/user/fetchMyUploads",
                     config
                 )
                 if(response){

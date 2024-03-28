@@ -29,7 +29,7 @@ function Sidebar() {
       };
       try {
         const response = await axios.get(
-          `${backendURL}/user/my-friends`,
+          backendURL + "/user/my-friends",
           config
         )
         const data = await response.data

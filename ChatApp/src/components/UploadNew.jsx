@@ -44,7 +44,7 @@ function UploadNew() {
 
 
             const response = await axios.post(
-                `${backendURL}/user/uploadContent`,
+                backendURL + "/user/uploadContent",
                 formData,
                 config
             )

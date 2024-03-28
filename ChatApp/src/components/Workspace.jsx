@@ -38,7 +38,7 @@ function Workspace() {
     const fetchFriendsChatId = async ()=>{
       try {
         const response = await axios.post(
-          `${backendURL}/user/fetchFriendsChatId`,
+          backendURL + "/user/fetchFriendsChatId",
           {
             name : othername
           },
@@ -63,7 +63,7 @@ function Workspace() {
     const fetchAllMessages = async()=>{
       try {
           const response = await axios.post(
-            `${backendURL}/user/fetchAllMessages`,
+            backendURL + "/user/fetchAllMessages",
             {
               chid : chatid
             },
@@ -93,7 +93,7 @@ function Workspace() {
     const updateMessages = async ()=>{
       try {
         const response = await axios.post(
-          `${backendURL}/user/updateMessages`,
+          backendURL + "/user/updateMessages",
           {
             chat_id : chatid,
             msg : {

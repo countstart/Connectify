@@ -25,8 +25,7 @@ function Login() {
                 }
             };
             const response = await axios.post(
-                // 'http://localhost:8000/user/register',
-                `${backendURL}/user/register`,
+                backendURL + "/user/register",
                 {
                     username : username,
                     email : email,

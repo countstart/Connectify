@@ -17,7 +17,7 @@ function Requestrecieve() {
         };
         try {
             const response = await axios.post(
-                `${backendURL}/user/request-recieve`,
+                backendURL + "/user/request-recieve",
                 {
                     name : friendname
                 },
@@ -45,7 +45,7 @@ function Requestrecieve() {
                     },
                 };
                 const response = await axios.get(
-                    `${backendURL}/user/friendrequestrecieve`,
+                    backendURL + "/user/friendrequestrecieve",
                     config
                 )
                 // console.log(response);

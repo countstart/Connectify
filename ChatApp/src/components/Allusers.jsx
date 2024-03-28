@@ -24,8 +24,7 @@ function Allusers() {
                 };
         
                 const response = await axios.get(
-                    // "http://localhost:8000/user/all-users",
-                    `${backendURL}/user/all-users`,
+                    backendURL + "/user/all-users",
                     config,
                 )
                
@@ -50,8 +49,7 @@ function Allusers() {
         };
         try {
             const response = await axios.post(
-                // `http://localhost:8000/user/request-sent`,
-                `${backendURL}/user/request-sent`,
+                backendURL + "/user/request-sent",
                 {
                     name : friendname
                 },

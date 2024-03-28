@@ -61,13 +61,14 @@ const connectDB = async ()=>{
 
 connectDB()
 
-app.use("/user",userRoutes)
 
 app.get('/',(req,res)=>{
     res.json({
         message : "this is the home screen"
     })
 })
+
+app.use("/user",userRoutes)
 
 io.on("connection",(socket)=>{
     console.log("user connected with socket ID ", socket.id)

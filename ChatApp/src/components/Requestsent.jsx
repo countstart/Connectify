@@ -21,7 +21,7 @@ function Requestsent() {
                     },
                 };
                 const response = await axios.get(
-                    `${backendURL}/user/friendrequest`,
+                    backendURL + "/user/friendrequest",
                     config
                 )
                 console.log(response);
